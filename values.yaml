@@ -1,0 +1,59 @@
+#This setting enables dev mode to include a local MongoDB install
+devMode:
+  enabled: true
+
+#This setting accepts the EULA for the product
+engine:
+  acceptEULA: "yes"
+
+identity-providers:           
+  secrets:
+    idpConfigs:
+      - discoveryUrl: "https://qsefe-ccarr.au.auth0.com/.well-known/openid-configuration"
+        primary: true
+        clientId: "***"
+        clientSecret: "***"
+        realm: "***"
+        hostname: "***.elastic.example"
+        claimsMapping:
+          client_id: [ "client_id", "azp" ]
+          groups: "/https:~1~1qlik.com~1groups"
+          sub: ["/https:~1~1qlik.com~1sub", "sub"]
+
+qix-datafiles:
+  persistence:
+    accessMode: ReadWriteMany
+    enabled: true
+    existingClaim: nfs
+redis:
+  persistence:
+    accessMode: ReadWriteMany
+    enabled: true
+    existingClaim: nfs
+reporting:
+  persistence:
+    accessMode: ReadWriteMany
+    enabled: true
+    existingClaim: nfs
+resource-library:
+  persistence:
+    accessMode: ReadWriteMany
+    enabled: true
+    existingClaim: nfs
+temporary-contents:
+  persistence:
+    accessMode: ReadWriteMany
+    enabled: true
+    existingClaim: nfs
+engine:
+  acceptEULA: "yes"
+  persistence:
+    accessMode: ReadWriteMany
+    enabled: true
+    existingClaim: nfs
+dcaas:
+  dcaas-redis:
+    persistence:
+      accessMode: ReadWriteMany
+      enabled: true
+      existingClaim: nfs
