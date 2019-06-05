@@ -9,7 +9,7 @@ engine:
 identity-providers:           
   secrets:
     idpConfigs:
-      - discoveryUrl: "https://qsefe-ccarr.au.auth0.com/.well-known/openid-configuration"
+      - discoveryUrl: "***"
         primary: true
         clientId: "***"
         clientSecret: "***"
