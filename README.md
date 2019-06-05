@@ -6,6 +6,7 @@ This repository will deploy QSEonK8s into GKE.  The shell script can be executed
 1. A Google Account
 2. API's enabled for K8s
 3. Helm installed
+4. An OIDC compatible IdP
 
 ## Instructions
 1. Clone this repository
